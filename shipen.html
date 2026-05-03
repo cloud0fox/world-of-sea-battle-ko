@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="ko" />
+	<title>World of Sea Battle - Ship EN</title>
+	<script type="text/javascript" src="jquery-1.4.3.min.js" charset="utf-8"></script> 
+<link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="ships.css">
+    <style>
+    body {
+      margin: 0;
+    }
+    nav {
+      background-color: #000;
+      position: relative;   /* 기준 위치 설정 */
+      z-index: 1000;        /* 메뉴바가 다른 요소 위에 오도록 */
+      padding: 30px 0;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-start;
+    }
+    nav ul li {
+      position: relative; /* 서브 메뉴 위치 기준 */
+      margin: 0 20px;
+    }
+nav ul li a,
+nav ul li span {
+  color: #fff;
+  text-decoration: none;
+  font-size: 26px !important;   /* 메뉴 항목 글자 크기 통일 */
+  font-family: 'Open Sans', sans-serif !important; /* 메뉴 항목 폰트 통일 */
+  font-weight: bold;
+  padding: 20px 0;
+  display: inline-block;
+  cursor: default; /* 마우스 커서가 링크처럼 안 바뀌게 */
+}
+    nav ul li a:hover,
+    nav ul li span:hover {
+      color: #ffcc00;
+    }
+
+    /* 서브 메뉴 스타일 */
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #222;
+      padding: 10px 0;
+      list-style: none;
+      min-width: 150px;
+      z-index: 2000;        /* 서브 메뉴가 다른 요소 위에 오도록 */
+    }
+    nav ul li ul li a {
+      padding: 8px 15px;
+      display: block;
+      color: #fff;
+    }
+    nav ul li ul li a:hover {
+      background-color: #444;
+    }
+
+    nav ul li:hover ul {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">지도</a></li>
+        <li>
+        <span class="menu-title">선박 정보</span>
+        <ul>
+          <li><a href="shipen.html">EN</a></li>
+          <li><a href="shipko.html">KO</a></li>
+        </ul>
+    </li>
+</ul>
+  </nav>
+</body>
+</html>
+
+  <main class="site-main">
+            <div class="page-content">
+  <h1 class="page-title page-title--map">Ships</h1>
+
+  <div class="ships-levels" aria-label="Ship levels">
+          <span>VII</span>
+          <span>VI</span>
+          <span>V</span>
+          <span>IV</span>
+          <span>III</span>
+          <span>II</span>
+          <span>I</span>
+      </div>
+
+      <section class="ships-group" aria-label="Fast ships">
+      <h2 class="ships-group__title">Fast ships</h2>
+            <div class="ships-grid">
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Fast ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>VII</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>700</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>9.2</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>94</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>1.6</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>6000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>66</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>12</span></div>
+                </div>
+                <img src="ships/mPickle.png" alt="Pickle">
+                <h3>Pickle</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Fast ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>VI</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>900</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>10</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>97</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>1.8</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>8000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>78</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>18</span></div>
+                </div>
+                <img src="ships/mLe-Cerf.png" alt="Le Cerf">
+                <h3>Le Cerf</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Fast ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>V</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>1400</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>11</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>100</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>2</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>11000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>96</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>28</span></div>
+                </div>
+                <img src="ships/mLa-Creole.png" alt="La Creole">
+                <h3>La Creole</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Fast ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>IV</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>1680</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>10.5</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>105</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>2.4</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>13000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>112</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>38</span></div>
+                </div>
+                <img src="ships/mSurprise.png" alt="Surprise">
+                <h3>Surprise</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Fast ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>III</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>2100</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>9.6</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>95</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>2.8</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>15500</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>132</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>50</span></div>
+                </div>
+                <img src="ships/mPoltava.png" alt="Poltava">
+                <h3>Poltava</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Fast ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>II</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>2340</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>9</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>87</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>3.2</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>17500</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>152</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>68</span></div>
+                </div>
+                <img src="ships/mIngermanland.png" alt="Ingermanland">
+                <h3>Ingermanland</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell ships-cell--empty">
+                      </div>
+              </div>
+          </section>
+      <section class="ships-group" aria-label="Combat ships">
+      <h2 class="ships-group__title">Combat ships</h2>
+            <div class="ships-grid">
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Combat ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>VII</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>850</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>8.4</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>80</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>3.2</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>7000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>78</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>18</span></div>
+                </div>
+                <img src="ships/mHorizon.png" alt="Horizon">
+                <h3>Horizon</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Combat ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>VI</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>1160</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>8.8</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>82</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>3.6</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>9500</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>96</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>22</span></div>
+                </div>
+                <img src="ships/mLa-Salamandre.png" alt="La Salamandre">
+                <h3>La Salamandre</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Combat ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>V</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>1820</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>9.4</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>84</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>4</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>13000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>116</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>36</span></div>
+                </div>
+                <img src="ships/mBlack-Wind.png" alt="Black Wind">
+                <h3>Black Wind</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Combat ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>IV</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>2160</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>8.9</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>88</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>4.8</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>15500</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>136</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>46</span></div>
+                </div>
+                <img src="ships/mEssex.png" alt="Essex">
+                <h3>Essex</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Combat ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>III</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>2700</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>8.2</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>80</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>5.6</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>18500</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>160</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>66</span></div>
+                </div>
+                <img src="ships/mAnson.png" alt="Anson">
+                <h3>Anson</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Combat ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>II</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>3000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>7.7</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>74</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>6.4</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>21500</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>184</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>82</span></div>
+                </div>
+                <img src="ships/mSans-Pareil.png" alt="Sans Pareil">
+                <h3>Sans Pareil</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Combat ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>I</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>3740</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>7.1</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>66</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>8</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>25000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>204</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>106</span></div>
+                </div>
+                <img src="ships/mVictory.png" alt="Victory">
+                <h3>Victory</h3>
+              </article>
+                      </div>
+              </div>
+          </section>
+      <section class="ships-group" aria-label="Cargo ships">
+      <h2 class="ships-group__title">Cargo ships</h2>
+            <div class="ships-grid">
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Cargo ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>VII</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>750</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>8.8</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>86</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>2.2</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>11000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>72</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>16</span></div>
+                </div>
+                <img src="ships/mFriede.png" alt="Friede">
+                <h3>Friede</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Cargo ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>VI</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>1040</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>9.2</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>89</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>2.5</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>15500</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>88</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>20</span></div>
+                </div>
+                <img src="ships/mMercury.png" alt="Mercury">
+                <h3>Mercury</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Cargo ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>V</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>1600</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>9.9</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>91</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>2.7</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>22000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>108</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>30</span></div>
+                </div>
+                <img src="ships/mRussia.png" alt="Russia">
+                <h3>Russia</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Cargo ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>IV</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>1920</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>9.4</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>96</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>3.3</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>27500</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>126</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>40</span></div>
+                </div>
+                <img src="ships/mFalmouth.png" alt="Falmouth">
+                <h3>Falmouth</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Cargo ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>III</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>2380</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>8.7</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>87</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>3.9</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>34000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>148</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>56</span></div>
+                </div>
+                <img src="ships/mMordaunt.png" alt="Mordaunt">
+                <h3>Mordaunt</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Cargo ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>II</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>2660</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>8.1</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>80</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>4.4</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>43000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>170</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>68</span></div>
+                </div>
+                <img src="ships/mLaSirene.png" alt="La Sirene">
+                <h3>La Sirene</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Cargo ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>I</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>3500</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>7.6</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>72</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>5.5</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>50000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>188</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>64</span></div>
+                </div>
+                <img src="ships/mLaCouronne.png" alt="La Couronne">
+                <h3>La Couronne</h3>
+              </article>
+                      </div>
+              </div>
+          </section>
+      <section class="ships-group" aria-label="Heavy ships">
+      <h2 class="ships-group__title">Heavy ships</h2>
+            <div class="ships-grid">
+                  <div class="ships-cell ships-cell--empty">
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Heavy ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>VI</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>1380</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>8.2</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>75</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>4.5</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>12500</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>104</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>24</span></div>
+                </div>
+                <img src="ships/mPhoenix.png" alt="Phoenix">
+                <h3>Phoenix</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Heavy ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>V</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>2140</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>8.5</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>72</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>5</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>17500</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>126</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>40</span></div>
+                </div>
+                <img src="ships/mSanMartin.png" alt="San Martin">
+                <h3>San Martin</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Heavy ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>IV</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>2560</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>8</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>68</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>6</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>21500</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>148</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>52</span></div>
+                </div>
+                <img src="ships/mConstitution.png" alt="Constitution">
+                <h3>Constitution</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Heavy ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>III</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>3180</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>7.5</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>62</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>7</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>26000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>174</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>70</span></div>
+                </div>
+                <img src="ships/mBellona.png" alt="Bellona">
+                <h3>Bellona</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Heavy ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>II</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>3540</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>7</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>57</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>8</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>30500</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>198</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>86</span></div>
+                </div>
+                <img src="ships/mRedoutable.png" alt="Redoutable">
+                <h3>Redoutable</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Heavy ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>I</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>4400</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>6.2</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>49</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>10</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>36000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>220</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>118</span></div>
+                </div>
+                <img src="ships/m12Apostolov.png" alt="12 Apostolov">
+                <h3>12 Apostolov</h3>
+              </article>
+                      </div>
+              </div>
+          </section>
+      <section class="ships-group" aria-label="Siege ships">
+      <h2 class="ships-group__title">Siege ships</h2>
+            <div class="ships-grid">
+                  <div class="ships-cell ships-cell--empty">
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Siege ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>VI</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>980</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>9</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>102</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>2.9</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>9000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>74</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>14</span></div>
+                </div>
+                <img src="ships/mPolacca.png" alt="Polacca">
+                <h3>Polacca</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Siege ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>V</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>1520</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>9.6</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>105</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>3.2</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>12500</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>88</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>26</span></div>
+                </div>
+                <img src="ships/mLeRequin.png" alt="Le Requin">
+                <h3>Le Requin</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell ships-cell--empty">
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Siege ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>III</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>2000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>8</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>85</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>4.6</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>18000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>124</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>30</span></div>
+                </div>
+                <img src="ships/mKobukson.png" alt="Kobukson">
+                <h3>Kobukson</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Siege ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>II</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>2660</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>8.2</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>92</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>5.2</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>21000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>140</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>42</span></div>
+                </div>
+                <img src="ships/mAdventure.png" alt="Adventure">
+                <h3>Adventure</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Siege ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>I</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>2900</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>7.4</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>83</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>6.5</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>24000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>156</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>42</span></div>
+                </div>
+                <img src="ships/mLaRoyale.png" alt="La Royale">
+                <h3>La Royale</h3>
+              </article>
+                      </div>
+              </div>
+          </section>
+      <section class="ships-group" aria-label="Imperial ships">
+      <h2 class="ships-group__title">Imperial ships</h2>
+            <div class="ships-grid">
+                  <div class="ships-cell ships-cell--empty">
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Imperial ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>VI</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>200</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>21</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>50</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>1</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>1000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>8</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>0</span></div>
+                </div>
+                <img src="ships/mBalloon.png" alt="Balloon">
+                <h3>Balloon</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Imperial ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>V</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>1700</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>9.9</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>90</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>3</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>14500</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>120</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>34</span></div>
+                </div>
+                <img src="ships/mBlackPrince.png" alt="Black Prince">
+                <h3>Black Prince</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Imperial ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>IV</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>1760</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>7.5</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>110</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>5.5</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>17000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>144</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>42</span></div>
+                </div>
+                <img src="ships/mDevourer.png" alt="Devourer">
+                <h3>Devourer</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Imperial ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>III</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>3000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>6.6</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>66</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>8</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>27000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>166</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>59</span></div>
+                </div>
+                <img src="ships/mDeadfish.png" alt="Deadfish">
+                <h3>Deadfish</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Imperial ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>II</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>2760</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>8.3</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>75</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>6.8</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>23000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>176</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>82</span></div>
+                </div>
+                <img src="ships/mOctopus.png" alt="Octopus">
+                <h3>Octopus</h3>
+              </article>
+                      </div>
+                  <div class="ships-cell">
+                                        <article class="ship-card">
+                <div class="ship-card__tooltip" role="tooltip">
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Imperial ships</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>I</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>8000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>5.5</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>42</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>11.5</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>54000</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>288</span></div>
+                  <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>172</span></div>
+                </div>
+                <img src="ships/mHuracan.png" alt="Huracan">
+                <h3>Huracan</h3>
+              </article>
+                      </div>
+              </div>
+          </section>
+  
+  <section class="ships-premium">
+    <h2 class="page-title page-title--map">Premium and Unique Ships</h2>
+        <div class="ships-levels" aria-label="Ship levels">
+              <span>VII</span>
+              <span>VI</span>
+              <span>V</span>
+              <span>IV</span>
+              <span>III</span>
+              <span>II</span>
+              <span>I</span>
+          </div>
+    <div class="ships-grid">
+              <div class="ships-cell ships-cell--empty">
+                  </div>
+              <div class="ships-cell">
+                                  <article class="ship-card">
+              <div class="ship-card__tooltip" role="tooltip">
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Fast ships</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>VI</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>1000</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>10.8</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>92</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>3</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>10000</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>94</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>18</span></div>
+              </div>
+              <img src="ships/mSavannah.png" alt="Savannah">
+              <h3>Savannah</h3>
+            </article>
+                                  <article class="ship-card">
+              <div class="ship-card__tooltip" role="tooltip">
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Siege ships</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>VI</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>900</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>9.5</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>120</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>2.2</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>8500</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>96</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>14</span></div>
+              </div>
+              <img src="ships/mGoldenApostle.png" alt="Golden Apostle">
+              <h3>Golden Apostle</h3>
+            </article>
+                                  <article class="ship-card">
+              <div class="ship-card__tooltip" role="tooltip">
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Combat ships</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>VI</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>1000</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>8.5</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>90</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>3</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>11000</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>92</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>20</span></div>
+              </div>
+              <img src="ships/mShunsen.png" alt="Shunsen">
+              <h3>Shunsen</h3>
+            </article>
+                  </div>
+              <div class="ships-cell">
+                                  <article class="ship-card">
+              <div class="ship-card__tooltip" role="tooltip">
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Siege ships</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>V</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>1600</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>9.4</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>110</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>2.2</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>14000</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>84</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>20</span></div>
+              </div>
+              <img src="ships/mEagle.png" alt="Eagle">
+              <h3>Eagle</h3>
+            </article>
+                                  <article class="ship-card">
+              <div class="ship-card__tooltip" role="tooltip">
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Fast ships</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>V</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>880</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>9.8</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>110</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>5</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>7500</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>66</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>1</span></div>
+              </div>
+              <img src="ships/mAxelThorsen.png" alt="Axel Thorsen">
+              <h3>Axel Thorsen</h3>
+            </article>
+                                  <article class="ship-card">
+              <div class="ship-card__tooltip" role="tooltip">
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Combat ships</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>V</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>1360</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>7.9</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>105</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>4.5</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>12500</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>108</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>30</span></div>
+              </div>
+              <img src="ships/mKweeSong.png" alt="Kwee Song">
+              <h3>Kwee Song</h3>
+            </article>
+                                  <article class="ship-card">
+              <div class="ship-card__tooltip" role="tooltip">
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Cargo ships</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>V</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>1760</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>9.7</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>88</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>3.2</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>20500</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>102</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>32</span></div>
+              </div>
+              <img src="ships/mSouthampton.png" alt="Southampton">
+              <h3>Southampton</h3>
+            </article>
+                  </div>
+              <div class="ships-cell">
+                                  <article class="ship-card">
+              <div class="ship-card__tooltip" role="tooltip">
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Combat ships</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>IV</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>1940</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>8.6</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>95</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>5.5</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>18000</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>140</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>36</span></div>
+              </div>
+              <img src="ships/mRedArrow.png" alt="Red Arrow">
+              <h3>Red Arrow</h3>
+            </article>
+                                  <article class="ship-card">
+              <div class="ship-card__tooltip" role="tooltip">
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Siege ships</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>IV</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>1000</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>9.1</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>95</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>1.5</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>10000</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>72</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>8</span></div>
+              </div>
+              <img src="ships/mSparrow.png" alt="Sparrow">
+              <h3>Sparrow</h3>
+            </article>
+                                  <article class="ship-card">
+              <div class="ship-card__tooltip" role="tooltip">
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Cargo ships</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>IV</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>2020</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>9.4</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>96</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>3.5</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>26000</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>120</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>50</span></div>
+              </div>
+              <img src="ships/mFriedrichWilhelm.png" alt="Friedrich Wilhelm">
+              <h3>Friedrich Wilhelm</h3>
+            </article>
+                                  <article class="ship-card">
+              <div class="ship-card__tooltip" role="tooltip">
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Cargo ships</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>IV</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>1800</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>11.5</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>58</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>2.9</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>30000</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>100</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>32</span></div>
+              </div>
+              <img src="ships/mFlyingCloud.png" alt="Flying Cloud">
+              <h3>Flying Cloud</h3>
+            </article>
+                                  <article class="ship-card">
+              <div class="ship-card__tooltip" role="tooltip">
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Heavy ships</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>IV</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>2420</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>8.4</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>72</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>5.6</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>21000</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>152</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>54</span></div>
+              </div>
+              <img src="ships/mThreeHierarchs.png" alt="Three Hierarchs">
+              <h3>Three Hierarchs</h3>
+            </article>
+                  </div>
+              <div class="ships-cell">
+                                  <article class="ship-card">
+              <div class="ship-card__tooltip" role="tooltip">
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Cargo ships</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>III</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>2440</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>8.5</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>78</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>4.8</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>45000</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>170</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>62</span></div>
+              </div>
+              <img src="ships/mPrinsWillem.png" alt="Prins Willem">
+              <h3>Prins Willem</h3>
+            </article>
+                                  <article class="ship-card">
+              <div class="ship-card__tooltip" role="tooltip">
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Combat ships</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>III</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>2700</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>7.9</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>78</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>5.6</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>20000</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>170</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>64</span></div>
+              </div>
+              <img src="ships/mLeSaintLouis.png" alt="Le Saint Louis">
+              <h3>Le Saint Louis</h3>
+            </article>
+                                  <article class="ship-card">
+              <div class="ship-card__tooltip" role="tooltip">
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Heavy ships</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>III</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>3000</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>7.7</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>65</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>6.7</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>26000</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>174</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>84</span></div>
+              </div>
+              <img src="ships/mAzov.png" alt="Azov">
+              <h3>Azov</h3>
+            </article>
+                                  <article class="ship-card">
+              <div class="ship-card__tooltip" role="tooltip">
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Siege ships</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>III</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>2160</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>7.9</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>85</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>5.2</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>19000</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>158</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>45</span></div>
+              </div>
+              <img src="ships/mShen.png" alt="Shen">
+              <h3>Shen</h3>
+            </article>
+                                  <article class="ship-card">
+              <div class="ship-card__tooltip" role="tooltip">
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Fast ships</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>III</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>2220</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>9.3</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>92</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>3.1</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>16500</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>140</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>52</span></div>
+              </div>
+              <img src="ships/mIberia.png" alt="Iberia">
+              <h3>Iberia</h3>
+            </article>
+                  </div>
+              <div class="ships-cell">
+                                  <article class="ship-card">
+              <div class="ship-card__tooltip" role="tooltip">
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Fast ships</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>II</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>2600</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>8.7</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>85</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>4.2</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>20000</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>170</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>69</span></div>
+              </div>
+              <img src="ships/mFirestorm.png" alt="Firestorm">
+              <h3>Firestorm</h3>
+            </article>
+                                  <article class="ship-card">
+              <div class="ship-card__tooltip" role="tooltip">
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Combat ships</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>II</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>2900</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>8.2</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>80</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>5.8</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>28000</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>194</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>80</span></div>
+              </div>
+              <img src="ships/mNeptuno.png" alt="Neptuno">
+              <h3>Neptuno</h3>
+            </article>
+                                  <article class="ship-card">
+              <div class="ship-card__tooltip" role="tooltip">
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Heavy ships</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>II</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>4040</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>6.6</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>64</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>7.5</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>35000</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>206</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>68</span></div>
+              </div>
+              <img src="ships/mVasa.png" alt="Vasa">
+              <h3>Vasa</h3>
+            </article>
+                                  <article class="ship-card">
+              <div class="ship-card__tooltip" role="tooltip">
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Heavy ships</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>II</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>3260</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>7.3</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>64</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>7.3</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>33500</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>190</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>90</span></div>
+              </div>
+              <img src="ships/mStPavel.png" alt="St. Pavel">
+              <h3>St. Pavel</h3>
+            </article>
+                                  <article class="ship-card">
+              <div class="ship-card__tooltip" role="tooltip">
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Combat ships</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>II</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>2940</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>7.5</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>71</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>7.2</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>23500</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>194</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>86</span></div>
+              </div>
+              <img src="ships/mMontanes.png" alt="Montanes">
+              <h3>Montanes</h3>
+            </article>
+                  </div>
+              <div class="ships-cell">
+                                  <article class="ship-card">
+              <div class="ship-card__tooltip" role="tooltip">
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Heavy ships</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>I</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>4160</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>6.4</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>54</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>9</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>39500</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>212</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>130</span></div>
+              </div>
+              <img src="ships/mSantisimaTrinidad.png" alt="Santisima Trinidad">
+              <h3>Santisima Trinidad</h3>
+            </article>
+                                  <article class="ship-card">
+              <div class="ship-card__tooltip" role="tooltip">
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Combat ships</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>I</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>3320</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>7.7</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>75</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>8.6</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>26000</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>188</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>92</span></div>
+              </div>
+              <img src="ships/mDeZevenProvincien.png" alt="De Zeven Provincien">
+              <h3>De Zeven Provincien</h3>
+            </article>
+                                  <article class="ship-card">
+              <div class="ship-card__tooltip" role="tooltip">
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Type</span><span>Combat ships</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Level</span><span>I</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Durability</span><span>3600</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Speed</span><span>7.4</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Maneuverability</span><span>70</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Armor</span><span>7</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Cargo hold</span><span>26500</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Crew</span><span>192</span></div>
+                <div class="ship-card__tooltip-row"><span class="ship-card__tooltip-label">Guns</span><span>88</span></div>
+              </div>
+              <img src="ships/mSovereign.png" alt="Sovereign">
+              <h3>Sovereign</h3>
+            </article>
+                  </div>
+          </div>
+      </section>
+  <a href="#ships-compare" class="ships-compare-float" id="ships-compare-float" aria-label="Go to ship comparison">
+    <span class="ships-compare-float__icon" aria-hidden="true"></span>
+    <span class="ships-compare-float__count">0</span>
+  </a>
+
+  </div>
+
+<script>
+  (function() {
+    const compareButtons = Array.from(document.querySelectorAll('.ship-card__compare[data-ship-key]'));
+    const compareHint = document.querySelector('.ships-compare__hint');
+    const compareOutput = document.getElementById('ships-compare-output');
+    const compareFloat = document.getElementById('ships-compare-float');
+    if (!compareOutput || compareButtons.length === 0) return;
+
+    const comparedShips = new Map();
+    let sortBy = { key: null, dir: 1 };
+
+    const labels = {
+      ship: "Ship",
+      type: "Type",
+      level: "Level",
+      durability: "Durability",
+      armor: "Armor",
+      speed: "Speed",
+      maneuverability: "Maneuverability",
+      guns: "Guns",
+      crew: "Crew",
+      cargo: "Cargo hold",
+      actions: "Actions",
+      remove: "Remove"    };
+
+    function escapeHtml(value) {
+      return String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function getTableElements() {
+      const table = compareOutput.querySelector('.ships-compare__table');
+      if (!table) return null;
+      const body = table.querySelector('tbody');
+      if (!body) return null;
+      return { table: table, body: body };
+    }
+
+    const SORT_KEYS = ['level', 'durability', 'armor', 'speed', 'maneuverability', 'guns', 'crew', 'cargoHold'];
+    const HIGHLIGHT_MAX_KEYS = ['durability', 'armor', 'speed', 'maneuverability', 'guns', 'crew', 'cargoHold'];
+    const KEY_TO_COLUMN_INDEX = { level: 2, durability: 3, armor: 4, speed: 5, maneuverability: 6, guns: 7, crew: 8, cargoHold: 9 };
+
+    function ensureTable() {
+      const existing = getTableElements();
+      if (existing) {
+        updateSortArrows(existing.table);
+        return existing;
+      }
+      compareOutput.innerHTML = ''
+        + '<table class="ships-compare__table">'
+        + '<thead><tr>'
+        + '<th>' + escapeHtml(labels.ship) + '</th>'
+        + '<th>' + escapeHtml(labels.type) + '</th>'
+        + '<th data-sort="level">' + escapeHtml(labels.level) + '<span class="sort-arrow" aria-hidden="true"></span></th>'
+        + '<th data-sort="durability">' + escapeHtml(labels.durability) + '<span class="sort-arrow" aria-hidden="true"></span></th>'
+        + '<th data-sort="armor">' + escapeHtml(labels.armor) + '<span class="sort-arrow" aria-hidden="true"></span></th>'
+        + '<th data-sort="speed">' + escapeHtml(labels.speed) + '<span class="sort-arrow" aria-hidden="true"></span></th>'
+        + '<th data-sort="maneuverability">' + escapeHtml(labels.maneuverability) + '<span class="sort-arrow" aria-hidden="true"></span></th>'
+        + '<th data-sort="guns">' + escapeHtml(labels.guns) + '<span class="sort-arrow" aria-hidden="true"></span></th>'
+        + '<th data-sort="crew">' + escapeHtml(labels.crew) + '<span class="sort-arrow" aria-hidden="true"></span></th>'
+        + '<th data-sort="cargoHold">' + escapeHtml(labels.cargo) + '<span class="sort-arrow" aria-hidden="true"></span></th>'
+        + '<th>' + escapeHtml(labels.actions) + '</th>'
+        + '</tr></thead>'
+        + '<tbody></tbody>'
+        + '</table>';
+      const refs = getTableElements();
+      if (refs) setupSortHeaders(refs.table);
+      return refs;
+    }
+
+    function getSortValue(ship, key) {
+      const raw = ship[key];
+      if (key === 'speed' || key === 'armor') return parseFloat(String(raw).replace(',', '.')) || 0;
+      return parseInt(String(raw), 10) || 0;
+    }
+
+    function updateSortArrows(table) {
+      if (!table) return;
+      table.querySelectorAll('th[data-sort]').forEach(function(th) {
+        const arrow = th.querySelector('.sort-arrow');
+        if (!arrow) return;
+        const key = th.getAttribute('data-sort');
+        if (sortBy.key === key) {
+          arrow.textContent = sortBy.dir === 1 ? '\u25B2' : '\u25BC';
+          arrow.setAttribute('aria-label', sortBy.dir === 1 ? 'asc' : 'desc');
+        } else {
+          arrow.textContent = '';
+          arrow.removeAttribute('aria-label');
+        }
+      });
+    }
+
+    function setupSortHeaders(table) {
+      if (!table) return;
+      table.querySelectorAll('th[data-sort]').forEach(function(th) {
+        th.addEventListener('click', function() {
+          const key = th.getAttribute('data-sort');
+          if (!key || !SORT_KEYS.includes(key)) return;
+          if (sortBy.key === key) {
+            sortBy.dir = sortBy.dir === 1 ? -1 : 1;
+          } else {
+            sortBy.key = key;
+            sortBy.dir = 1;
+          }
+          updateSortArrows(table);
+          renderSortedRows();
+        });
+      });
+    }
+
+    function buildRowHtml(ship) {
+      return ''
+        + '<td><span class="ships-compare__ship-cell"><img src="' + escapeHtml(ship.image) + '" alt="' + escapeHtml(ship.name) + '"><span>' + escapeHtml(ship.name) + '</span></span></td>'
+        + '<td>' + escapeHtml(ship.type) + '</td>'
+        + '<td>' + escapeHtml(ship.level) + '</td>'
+        + '<td>' + escapeHtml(ship.durability) + '</td>'
+        + '<td>' + escapeHtml(ship.armor) + '</td>'
+        + '<td>' + escapeHtml(ship.speed) + '</td>'
+        + '<td>' + escapeHtml(ship.maneuverability) + '</td>'
+        + '<td>' + escapeHtml(ship.guns) + '</td>'
+        + '<td>' + escapeHtml(ship.crew) + '</td>'
+        + '<td>' + escapeHtml(ship.cargoHold) + '</td>'
+        + '<td><button type="button" class="ships-compare__remove-btn" data-remove-ship="' + escapeHtml(ship.key) + '">' + escapeHtml(labels.remove) + '</button></td>';
+    }
+
+    function renderSortedRows() {
+      const refs = getTableElements();
+      if (!refs || comparedShips.size === 0) return;
+      let entries = Array.from(comparedShips.entries());
+      if (sortBy.key && SORT_KEYS.includes(sortBy.key)) {
+        const dir = sortBy.dir;
+        const key = sortBy.key;
+        entries.sort(function(a, b) {
+          const va = getSortValue(a[1], key);
+          const vb = getSortValue(b[1], key);
+          if (va !== vb) return (va - vb) * dir;
+          return (String(a[0]).localeCompare(String(b[0]))) * dir;
+        });
+      }
+      refs.body.innerHTML = '';
+      entries.forEach(function(entry) {
+        const ship = entry[1];
+        const tr = document.createElement('tr');
+        tr.dataset.shipKey = ship.key;
+        tr.innerHTML = buildRowHtml(ship);
+        refs.body.appendChild(tr);
+      });
+      highlightMaxValues();
+    }
+
+    function highlightMaxValues() {
+      const refs = getTableElements();
+      if (!refs || comparedShips.size === 0) return;
+      refs.body.querySelectorAll('td.ships-compare__cell--max').forEach(function(td) {
+        td.classList.remove('ships-compare__cell--max');
+      });
+      const ships = Array.from(comparedShips.values());
+      const maxByKey = {};
+      HIGHLIGHT_MAX_KEYS.forEach(function(key) {
+        let max = -Infinity;
+        ships.forEach(function(ship) {
+          const v = getSortValue(ship, key);
+          if (v > max) max = v;
+        });
+        maxByKey[key] = max;
+      });
+      refs.body.querySelectorAll('tr[data-ship-key]').forEach(function(tr) {
+        const ship = comparedShips.get(tr.dataset.shipKey);
+        if (!ship) return;
+        HIGHLIGHT_MAX_KEYS.forEach(function(key) {
+          const idx = KEY_TO_COLUMN_INDEX[key];
+          if (idx == null) return;
+          const cell = tr.cells[idx];
+          if (!cell) return;
+          if (getSortValue(ship, key) === maxByKey[key]) {
+            cell.classList.add('ships-compare__cell--max');
+          }
+        });
+      });
+    }
+
+    function syncHintVisibility() {
+      if (!compareHint) return;
+      compareHint.classList.toggle('is-hidden', comparedShips.size > 0);
+    }
+
+    function updateCompareFloat() {
+      if (!compareFloat) return;
+      const count = comparedShips.size;
+      const countEl = compareFloat.querySelector('.ships-compare-float__count');
+      if (countEl) countEl.textContent = String(count);
+      compareFloat.classList.toggle('is-visible', count > 0);
+    }
+
+    function setButtonAddedState(shipKey, isAdded) {
+      compareButtons.forEach(function(btn) {
+        if (String(btn.dataset.shipKey || '') !== shipKey) return;
+        btn.classList.toggle('is-added', isAdded);
+      });
+    }
+
+    function removeShipFromCompare(shipKey) {
+      const key = String(shipKey || '');
+      if (!key || !comparedShips.has(key)) return;
+      comparedShips.delete(key);
+      const tableRefs = getTableElements();
+      if (tableRefs) {
+        if (comparedShips.size === 0) {
+          compareOutput.innerHTML = '';
+        } else {
+          renderSortedRows();
+        }
+      }
+      setButtonAddedState(key, false);
+      syncHintVisibility();
+      updateCompareFloat();
+    }
+
+    function addShipToCompare(button) {
+      const key = String(button.dataset.shipKey || '');
+      if (!key || comparedShips.has(key)) return;
+      const refs = ensureTable();
+      if (!refs) return;
+      const ship = {
+        key: key,
+        name: String(button.dataset.name || ''),
+        type: String(button.dataset.type || ''),
+        level: String(button.dataset.level || ''),
+        durability: String(button.dataset.durability || ''),
+        armor: String(button.dataset.armor || ''),
+        speed: String(button.dataset.speed || ''),
+        maneuverability: String(button.dataset.maneuverability || ''),
+        guns: String(button.dataset.guns || ''),
+        crew: String(button.dataset.crew || ''),
+        cargoHold: String(button.dataset.cargoHold || ''),
+        image: String(button.dataset.image || '')
+      };
+      comparedShips.set(ship.key, ship);
+      setButtonAddedState(ship.key, true);
+      syncHintVisibility();
+      renderSortedRows();
+      updateCompareFloat();
+    }
+
+    compareButtons.forEach(function(button) {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        const key = String(button.dataset.shipKey || '');
+        if (comparedShips.has(key)) {
+          removeShipFromCompare(key);
+        } else {
+          addShipToCompare(button);
+        }
+      });
+    });
+
+    compareOutput.addEventListener('click', function(e) {
+      const target = e.target;
+      if (!(target instanceof HTMLElement)) return;
+      const removeBtn = target.closest('.ships-compare__remove-btn[data-remove-ship]');
+      if (!removeBtn) return;
+      e.preventDefault();
+      removeShipFromCompare(String(removeBtn.dataset.removeShip || ''));
+    });
+
+    if (compareFloat) {
+      compareFloat.addEventListener('click', function(e) {
+        if (comparedShips.size === 0) return;
+        const target = document.getElementById('ships-compare');
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
+  })();
+</script>
+      </main>
+
+<script type="text/javascript">
+  (function() {
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('site-nav');
+    if (!toggle || !nav) return;
+
+    function closeMenu() {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+
+    toggle.addEventListener('click', function() {
+      const isOpen = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    nav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        closeMenu();
+      });
+    });
+
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+        closeMenu();
+      }
+    });
+  })();
+</script>
+
+  
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106884716', 'ym');
+
+    ym(106884716, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106884716" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+
+</body>
+</html>

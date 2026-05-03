@@ -1,0 +1,348 @@
+/* Page: Ships */
+.ships-levels {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 14px;
+  margin: 2px 0 12px;
+}
+
+.ships-levels span {
+  text-align: center;
+  font-size: 2.05rem;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  color: #e9d9b4;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+}
+
+.ships-group {
+  margin-bottom: 18px;
+}
+
+.ships-group__title {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #d7dce7;
+}
+
+.ships-group__placeholder {
+  margin: 0 0 18px;
+  font-size: 0.95rem;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.ships-premium .ships-group__placeholder {
+  margin-bottom: 0;
+}
+
+.ships-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 14px;
+  align-items: start; /* 상단 기준으로 맞춤 */
+  grid-auto-rows: min-content; /* 행 높이를 최소 콘텐츠 기준으로 */
+}
+
+.ships-cell {
+  min-height: 1px;
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.ships-cell--empty {
+  background: transparent;
+  border: 0;
+}
+
+.ship-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 10px 8px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.ship-card__compare {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  color: #dbe2ee;
+  font-size: 15px;
+  line-height: 1;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+  padding: 0;
+  transition: border-color 0.18s ease, background 0.18s ease, color 0.18s ease;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ship-card__compare:hover,
+.ship-card__compare.is-added,
+.ship-card__compare:focus-visible {
+  border-color: rgba(249, 115, 22, 0.75);
+  background: rgba(249, 115, 22, 0.14);
+  color: #ffd9b2;
+}
+
+.ships-compare__hint {
+  margin: 2px 0 0;
+  color: #cfd6e3;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+
+.ships-compare__icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  color: #dbe2ee;
+  font-size: 15px;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.03);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 22px;
+}
+
+.ships-compare__hint.is-hidden {
+  display: none;
+}
+
+.ships-compare__table-wrap {
+  margin-top: 10px;
+  overflow-x: auto;
+}
+
+.ships-compare__table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 920px;
+}
+
+.ships-compare__table th,
+.ships-compare__table td {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 8px 10px;
+  font-size: 0.86rem;
+  color: #d8dde8;
+  vertical-align: middle;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.ships-compare__table th {
+  color: #e4e9f2;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.ships-compare__table th[data-sort] {
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  padding-right: 20px;
+}
+
+.ships-compare__table th[data-sort]:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.ships-compare__table .sort-arrow {
+  margin-left: 4px;
+  font-size: 0.75em;
+  opacity: 0.9;
+}
+
+.ships-compare__table td.ships-compare__cell--max {
+  background: rgba(34, 197, 94, 0.18);
+  color: #86efac;
+  font-weight: 600;
+}
+
+.ships-compare__ship-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ships-compare__ship-cell img {
+  width: 44px;
+  height: 28px;
+  object-fit: contain;
+  display: block;
+}
+
+.ships-compare__remove-btn {
+  border: 1px solid #7f1d1d;
+  background: #7f1d1d;
+  color: #fff;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 0.76rem;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.ships-compare__remove-btn:hover {
+  background: #991b1b;
+  border-color: #991b1b;
+}
+
+.ship-card:hover {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.ship-card img {
+  width: 100%;
+  height: 110px;
+  object-fit: contain;
+  display: block;
+}
+
+.ship-card h3 {
+  margin: 10px 0 2px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #d8dde8;
+  line-height: 1.25;
+  text-align: center;
+}
+.ship-card__tooltip {
+  position: absolute;
+  top: 0;               /* 카드 맨 위 기준 */
+  left: 100%;           /* 카드 오른쪽에 붙임 */
+  transform: translateX(0); /* 기본은 카드에 딱 붙음 */
+  min-width: 200px;
+  padding: 10px 20px;
+  background: rgba(15, 23, 42, 0.98);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  font-size: 0.82rem;
+  color: #e2e8f0;
+  line-height: 1.5;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 20;
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+}
+.ship-card:hover .ship-card__tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(10px); /* hover 시 오른쪽으로 띄움 */
+}
+
+.ship-card__tooltip-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.ship-card__tooltip-row + .ship-card__tooltip-row {
+  margin-top: 4px;
+}
+
+.ship-card__tooltip-label {
+  color: #94a3b8;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1280px) {
+  .ships-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 980px) {
+  .ships-levels {
+    display: none;
+  }
+
+  .ships-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .ships-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ships-cell--empty {
+    display: none;
+  }
+}
+
+.ships-compare-float {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 48px;
+  height: 48px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(249, 115, 22, 0.9);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease, background 0.2s ease;
+  pointer-events: none;
+}
+
+.ships-compare-float.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.ships-compare-float:hover {
+  background: rgba(249, 115, 22, 1);
+}
+
+.ships-compare-float__icon {
+  width: 22px;
+  height: 22px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+
+.ships-compare-float__count {
+  line-height: 1;
+}
