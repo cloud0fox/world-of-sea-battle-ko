@@ -4,7 +4,7 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="content-language" content="ko" />
-	<title>World of Sea Battle - Ship KO</title>
+	<title>World of Sea Battle - Ship EN</title>
 	<script type="text/javascript" src="jquery-1.4.3.min.js" charset="utf-8"></script> 
 <link rel="stylesheet" href="style.css"> 
   <link rel="stylesheet" href="ships.css">
@@ -14,37 +14,21 @@
     }
     nav {
       background-color: #000;
+      position: relative;   /* 기준 위치 설정 */
+      z-index: 1000;        /* 메뉴바가 다른 요소 위에 오도록 */
+      padding: 30px 0;
     }
     nav ul {
       list-style: none;
       margin: 0;
       padding: 0;
       display: flex;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      justify-content: flex-end;
-=======
-      justify-content: center;
->>>>>>> parent of b6b1363 (Update shipko.html)
-=======
       justify-content: flex-start;
->>>>>>> dbb8c3b1884ad9c2218f59540f22f33b8ab00e5c
     }
     nav ul li {
       position: relative; /* 서브 메뉴 위치 기준 */
       margin: 0 20px;
     }
-<<<<<<< HEAD
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: bold;
-      padding: 10px 0;
-      display: inline-block;
-    }
-    nav ul li a:hover {
-=======
 nav ul li a,
 nav ul li span {
   color: #fff;
@@ -58,23 +42,20 @@ nav ul li span {
 }
     nav ul li a:hover,
     nav ul li span:hover {
->>>>>>> dbb8c3b1884ad9c2218f59540f22f33b8ab00e5c
       color: #ffcc00;
     }
 
     /* 서브 메뉴 스타일 */
     nav ul li ul {
-      display: none; /* 기본은 숨김 */
+      display: none;
       position: absolute;
-      top: 100%; /* 부모 메뉴 바로 아래 */
+      top: 100%;
       left: 0;
       background-color: #222;
       padding: 10px 0;
       list-style: none;
       min-width: 150px;
-    }
-    nav ul li ul li {
-      margin: 0;
+      z-index: 2000;        /* 서브 메뉴가 다른 요소 위에 오도록 */
     }
     nav ul li ul li a {
       padding: 8px 15px;
@@ -85,7 +66,6 @@ nav ul li span {
       background-color: #444;
     }
 
-    /* 마우스 올리면 서브 메뉴 표시 */
     nav ul li:hover ul {
       display: block;
     }
