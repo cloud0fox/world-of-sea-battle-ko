@@ -171,7 +171,7 @@ label {margin-right: 2em;}
   <input type="checkbox" id="show-circle" checked="checked" />
   <label for="show-circle">PvP 원형 경계 표시</label><br/>
 
-  <input type="checkbox" id="show-Trade-Map-1" checked="checked" />
+  <input type="checkbox" id="show-Trade-Map-1" />
   <label for="show-Trade-Map-1">무역 경계 표시</label><br/>
   </p>
   <p>빨간색 윤곽선으로 표시된 생산지는 알려진 지도 밖(끝없는 바다)에 위치하며, 해당 위치는 대략적인 것입니다.<br/>
@@ -1233,7 +1233,39 @@ $(document).ready(function() {
     $('#fortsxy').toggle();
   });
 });
+$(document).ready(function() {
+  $('#show-Trade-Map-1').change(function() {
+    if ($(this).is(':checked')) {
+      // Trade-Map-1 체크 ON → 다른 체크박스 끄기
+      $('#show-ports').prop('checked', false);
+      $('#show-portsxy').prop('checked', false);
+      $('#show-islandsxy').prop('checked', false);
+      $('#show-productionsxy').prop('checked', false);
+      $('#show-fast-travel').prop('checked', false);
 
+      // 해당 요소들도 숨기기
+      $('#ports').hide();
+      $('#portsxy').hide();
+      $('#islandsxy').hide();
+      $('#productionsxy').hide();
+      $('#fast-travel').hide();
+    } else {
+      // Trade-Map-1 체크 OFF → 다른 체크박스 다시 켜기
+      $('#show-ports').prop('checked', true);
+      $('#show-portsxy').prop('checked', true);
+      $('#show-islandsxy').prop('checked', true);
+      $('#show-productionsxy').prop('checked', true);
+      $('#show-fast-travel').prop('checked', true);
+
+      // 해당 요소들도 다시 보이기
+      $('#ports').show();
+      $('#portsxy').show();
+      $('#islandsxy').show();
+      $('#productionsxy').show();
+      $('#fast-travel').show();
+    }
+  });
+});
 
 
 	</script> 
