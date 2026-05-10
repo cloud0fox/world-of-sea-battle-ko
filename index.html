@@ -133,19 +133,15 @@ label {margin-right: 2em;}
 </head>
 <body style="margin:0; padding:0; background:#000;">
 <div id="toolbar"
-     style="background:#333; 
-            color:#fff; 
-            font-family:Open Sans, sans-serif; 
-            font-size:14px; 
-            margin-top:10px; 
-            padding:10px; 
-            padding-bottom:25px; 
-            display:flex; 
-            flex-direction:column; /* 세로 배치 */
-            align-items:flex-start; 
-            z-index:10000;
-            width:1863px;"> <!-- 지도와 동일한 가로 크기 -->
-
+     style="background:#333; color:#fff;
+            font-family:Open Sans, sans-serif;
+            font-size:14px;
+            margin-top:10px; padding:10px;
+            display:flex; flex-direction:column;
+            align-items:flex-start;
+            width:1863px;
+            position:relative; z-index:1000;"> <!-- 지도보다 위 -->
+  <!-- 툴바 내용 -->
     <h1>World of Sea Battle 한국어 지도</h1>
   <p>
   <input type="checkbox" id="show-ports" checked="checked" />
@@ -190,39 +186,36 @@ If you spot any errors feel free to contact me.
 </p>
 </div>
 
-  <div id="container" 
-    style="position:relative; width:2163px; height:1551px; margin:0; padding:0; position:relative; overflow:hidden;">
-  <div id="canvas" 
-    style="background-image:url('map/mapa.png');
-          width:1863px; height:1551px;
-          background-size:auto;
-          background-repeat:no-repeat;
-          position:absolute; top:0; left:0;">
+<div id="container"
+     style="position:relative; width:2163px; height:1551px; overflow:hidden;">
+  <div id="canvas"
+       style="background-image:url('map/mapa.png');
+              width:1863px; height:1551px;
+              background-repeat:no-repeat;
+              position:absolute; top:0; left:0; z-index:1;">
   </div>
 
-  <div id="circle" 
-    style="background-image:url('map/circle.png');
-      width:1863px; height:1551px;
-      
-      position:absolute; top:0; left:0;">
+  <div id="circle"
+       style="background-image:url('map/circle.png');
+              width:1863px; height:1551px;
+              position:absolute; top:0; left:0; z-index:1;">
   </div>
 
-  <div id="Trade-Map-1" 
-    style="background-image:url('map/Trade-Map-1.png');
-    width:1863px; height:1551px;
-    position:absolute; top:0; left:0; display:none;">
+  <div id="Trade-Map-1"
+       style="background-image:url('map/Trade-Map-1.png');
+              width:1863px; height:1551px;
+              position:absolute; top:0; left:0; display:none; z-index:1;">
   </div>
 
-  <div id="fast-travel" 
-    style="background-image:url('map/fast-travel.png');
-      width:1863px; height:1551px;
-      position:absolute; top:0; left:0;">
+  <div id="fast-travel"
+       style="background-image:url('map/fast-travel.png');
+              width:1863px; height:1551px;
+              position:absolute; top:0; left:0; z-index:1;">
   </div>
 
-  <div id="ports" 
+<div id="ports" 
     style="width:1863px; height:1551px;
       position:absolute; top:0; left:0;">
-	</div>
 
   <img src="map/k.png" style="position:absolute; top:1181px; left:67px;" title="Assab" alt="Assab" />
     <div class="label" style="position:absolute; top:1241px; left:97px; text-indent:-2.5ch; z-index:100;">
