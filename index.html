@@ -1242,33 +1242,22 @@ $(document).ready(function() {
 $(document).ready(function() {
   $('#show-Trade-Map-1').change(function() {
     if ($(this).is(':checked')) {
-      // Trade-Map-1 체크 ON → 다른 체크박스 끄기
-      $('#show-ports').prop('checked', false);
-      $('#show-portsxy').prop('checked', false);
-      $('#show-islandsxy').prop('checked', false);
-      $('#show-productionsxy').prop('checked', false);
-      $('#show-fast-travel').prop('checked', false);
+      // Trade-Map-1 보이기 + 맨 위로
+      $('#Trade-Map-1').show().css('z-index', 9999);
 
-      // 해당 요소들도 숨기기
-      $('#ports').hide();
-      $('#portsxy').hide();
-      $('#islandsxy').hide();
-      $('#productionsxy').hide();
-      $('#fast-travel').hide();
+      // 다른 체크박스 끄기 + 숨기기
+      $('#show-portsxy, #show-islandsxy, #show-productionsxy, #show-fast-travel')
+        .prop('checked', false);
+      $('#portsxy, #islandsxy, #productionsxy, #fast-travel').hide();
+
     } else {
-      // Trade-Map-1 체크 OFF → 다른 체크박스 다시 켜기
-      $('#show-ports').prop('checked', true);
-      $('#show-portsxy').prop('checked', true);
-      $('#show-islandsxy').prop('checked', true);
-      $('#show-productionsxy').prop('checked', true);
-      $('#show-fast-travel').prop('checked', true);
+      // Trade-Map-1 숨기기
+      $('#Trade-Map-1').hide().css('z-index', '');
 
-      // 해당 요소들도 다시 보이기
-      $('#ports').show();
-      $('#portsxy').show();
-      $('#islandsxy').show();
-      $('#productionsxy').show();
-      $('#fast-travel').show();
+      // 다른 체크박스 다시 켜기 + 보이기
+      $('#show-portsxy, #show-islandsxy, #show-productionsxy, #show-fast-travel')
+        .prop('checked', true);
+      $('#portsxy, #islandsxy, #productionsxy, #fast-travel').show();
     }
   });
 });
