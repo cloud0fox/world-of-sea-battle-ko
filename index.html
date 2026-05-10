@@ -1222,13 +1222,13 @@ $(document).ready(function() {
       $('#Trade-Map-1').show().css('z-index', 9999);
 
       // 다른 체크박스 끄기
-      $('#show-fast-travel, #show-island, #show-production, #show-altar, #show-fort,')
+      $('#show-fast-travel, #show-island, #show-production, #show-altar, #show-fort')
         .prop('checked', false).trigger('change');
     } else {
       $('#Trade-Map-1').hide().css('z-index', '');
 
       // 다른 체크박스 다시 켜기
-      $(' #show-fast-travel, #show-island, #show-production, #show-altar, #show-fort,')
+      $(' #show-fast-travel, #show-island, #show-production, #show-altar, #show-fort')
         .prop('checked', true).trigger('change');
     }
   });
