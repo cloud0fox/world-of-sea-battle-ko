@@ -1197,21 +1197,9 @@ $(document).ready(function() {
   $('#show-lighthouses').change(function() {
     $('#lighthouses').toggle(this.checked);
   });
-  $('#show-portsxy').change(function() {
-    $('#portsxy').toggle(this.checked);
-  });  
-  $('#show-islandsxy').change(function() {
-    $('#islandsxy').toggle(this.checked);
-  });  
-  $('#show-productionsxy').change(function() {
-    $('#productionsxy').toggle(this.checked);
-  });  
   $('#show-fast-travel').change(function() {
     $('#fast-travel').toggle(this.checked);
-  });  
-  $('#show-circle').change(function() {
-    $('#circle').toggle(this.checked);
-  }); 
+  });
   $('#show-island').change(function() {
     $('.island').toggle(this.checked);
   });
@@ -1224,11 +1212,8 @@ $(document).ready(function() {
   $('#show-fort').change(function() {
     $('.fort').toggle(this.checked);
   });
-  $('#show-altarsxy').change(function() {
-    $('#altarsxy').toggle(this.checked);
-  });
-  $('#show-fortsxy').change(function() {
-    $('#fortsxy').toggle(this.checked);
+  $('#show-circle').change(function() {
+    $('#circle').toggle(this.checked);
   });
 
   // Trade-Map-1 제어
@@ -1237,13 +1222,13 @@ $(document).ready(function() {
       $('#Trade-Map-1').show().css('z-index', 9999);
 
       // 다른 체크박스 끄기
-      $('#show-fast-travel, #show-island, #show-production, #show-altar, #show-fort')
+      $('#show-fast-travel, #show-island, #show-production, #show-altar, #show-fort,')
         .prop('checked', false).trigger('change');
     } else {
       $('#Trade-Map-1').hide().css('z-index', '');
 
       // 다른 체크박스 다시 켜기
-      $('#show-fast-travel, #show-island, #show-production, #show-altar, #show-fort')
+      $(' #show-fast-travel, #show-island, #show-production, #show-altar, #show-fort,')
         .prop('checked', true).trigger('change');
     }
   });
