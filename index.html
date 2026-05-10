@@ -1236,6 +1236,15 @@ $(document).ready(function() {
 $(document).ready(function() {
   $('#show-Trade-Map-1').change(function() {
     if ($(this).is(':checked')) {
+      $('#Trade-Map-1').show().css('z-index', 9999); // 맨 위로
+    } else {
+      $('#Trade-Map-1').hide().css('z-index', '');   // 원래대로
+    }
+  });
+});
+$(document).ready(function() {
+  $('#show-Trade-Map-1').change(function() {
+    if ($(this).is(':checked')) {
       // Trade-Map-1 체크 ON → 다른 체크박스 끄기
       $('#show-ports').prop('checked', false);
       $('#show-portsxy').prop('checked', false);
