@@ -1190,60 +1190,61 @@ If you spot any errors feel free to contact me.
 
 <script type="text/javascript">
 $(document).ready(function() {
-  $('#show-ports').click(function() {
-    $('#ports').toggle();
+  // 일반 체크박스들
+  $('#show-ports').change(function() {
+    $('#ports').toggle(this.checked);
   });
-  $('#show-lighthouses').click(function() {
-    $('#lighthouses').toggle();
+  $('#show-lighthouses').change(function() {
+    $('#lighthouses').toggle(this.checked);
   });
-  $('#show-portsxy').click(function() {
+  $('#show-portsxy').change(function() {
     $('#portsxy').toggle(this.checked);
   });  
-  $('#show-islandsxy').click(function() {
+  $('#show-islandsxy').change(function() {
     $('#islandsxy').toggle(this.checked);
   });  
-  $('#show-productionsxy').click(function() {
+  $('#show-productionsxy').change(function() {
     $('#productionsxy').toggle(this.checked);
   });  
-	$('#show-fast-travel').click(function() {
+  $('#show-fast-travel').change(function() {
     $('#fast-travel').toggle(this.checked);
   });  
-	$('#show-circle').click(function() {
-    $('#circle').toggle();
+  $('#show-circle').change(function() {
+    $('#circle').toggle(this.checked);
   }); 
-	$('#show-island').click(function() {
-    $('.island').toggle();
+  $('#show-island').change(function() {
+    $('.island').toggle(this.checked);
   });
-  $('#show-production').click(function() {
-    $('.production').toggle();
+  $('#show-production').change(function() {
+    $('.production').toggle(this.checked);
   });
-  $('#show-altar').click(function() {
-    $('.altar').toggle();
+  $('#show-altar').change(function() {
+    $('.altar').toggle(this.checked);
   });
-  $('#show-fort').click(function() {
-    $('.fort').toggle();
+  $('#show-fort').change(function() {
+    $('.fort').toggle(this.checked);
   });
-  $('#show-altarsxy').click(function() {
-    $('#altarsxy').toggle();
+  $('#show-altarsxy').change(function() {
+    $('#altarsxy').toggle(this.checked);
   });
-  $('#show-fortsxy').click(function() {
-    $('#fortsxy').toggle();
+  $('#show-fortsxy').change(function() {
+    $('#fortsxy').toggle(this.checked);
   });
-});
-$(document).ready(function() {
+
+  // Trade-Map-1 제어
   $('#show-Trade-Map-1').change(function() {
     if (this.checked) {
       $('#Trade-Map-1').show().css('z-index', 9999);
 
       // 다른 체크박스 끄기
       $('#show-portsxy, #show-islandsxy, #show-productionsxy, #show-fast-travel')
-        .prop('checked', false).trigger('change'); // 상태 반영
+        .prop('checked', false).trigger('change');
     } else {
       $('#Trade-Map-1').hide().css('z-index', '');
 
       // 다른 체크박스 다시 켜기
       $('#show-portsxy, #show-islandsxy, #show-productionsxy, #show-fast-travel')
-        .prop('checked', true).trigger('change'); // 상태 반영
+        .prop('checked', true).trigger('change');
     }
   });
 });
