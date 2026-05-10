@@ -1186,7 +1186,6 @@ If you spot any errors feel free to contact me.
 
 <script type="text/javascript">
 $(document).ready(function() {
-  // 일반 체크박스들
   $('#show-ports').change(function() {
     $('#ports').toggle(this.checked);
   });
@@ -1216,22 +1215,16 @@ $(document).ready(function() {
   $('#show-Trade-Map-1').change(function() {
     if (this.checked) {
       $('#Trade-Map-1').show().css('z-index', 9999);
-
-      // 다른 체크박스 끄기
       $('#show-fast-travel, #show-island, #show-production, #show-altar, #show-fort')
         .prop('checked', false).trigger('change');
     } else {
       $('#Trade-Map-1').hide().css('z-index', '');
-
-      // 다른 체크박스 다시 켜기
       $('#show-fast-travel, #show-island, #show-production, #show-altar, #show-fort')
         .prop('checked', true).trigger('change');
     }
   });
 });
-
-
-	</script> 
-
+</script>
+</body>
 
 </html>
