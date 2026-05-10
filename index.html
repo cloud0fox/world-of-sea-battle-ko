@@ -170,6 +170,9 @@ label {margin-right: 2em;}
 
   <input type="checkbox" id="show-circle" checked="checked" />
   <label for="show-circle">PvP 원형 경계 표시</label><br/>
+
+  <input type="checkbox" id="show-Trade Map 1" checked="checked" />
+  <label for="show-Trade Map 1">무역 경계 표시</label><br/>
   </p>
   <p>빨간색 윤곽선으로 표시된 생산지는 알려진 지도 밖(끝없는 바다)에 위치하며, 해당 위치는 대략적인 것입니다.<br/>
 </p>
@@ -198,6 +201,12 @@ If you spot any errors feel free to contact me.
 
   <div id="circle" 
     style="background-image:url('map/circle.png');
+      width:1863px; height:1551px;
+      position:absolute; top:0; left:0;">
+  </div>
+
+  <div id="Trade Map 1" 
+    style="background-image:url('map/Trade Map 1.png');
       width:1863px; height:1551px;
       position:absolute; top:0; left:0;">
   </div>
@@ -1201,6 +1210,9 @@ $('#show-islandsxy').click(function() {
   });  
 	$('#show-circle').click(function() {
     $('#circle').toggle();
+  }); 
+  $('#show-Trade Map 1').click(function() {
+    $('#cTrade Map 1').toggle();
   });   
 	$('#show-island').click(function() {
     $('.island').toggle();
